@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/16b6c2968f.js"></script>
+
+    <title>Friend Finder - home</title>
+</head>
+
+<body>
+    <!-- top nav -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="./home">
+                    <p class="home"><i class="fab fa-connectdevelop"></i>Friend Finder</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="container">
+                <div class="row about">
+                    <h3>About you</h3>
+                    <hr>
+                    <div class="col-md-5">
+                        <div class="input-group">
+                            <label for="name">Name:</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="input-group">
+                            <label for="name">Profile image:</label>
+                            <input type="text" class="form-control" id="image" placeholder="Upload a photo">
+                        </div>
+                    </div>
+                </div>
+                <div class="row questions">
+                    <h3>Survey Questions</h3>
+                    <hr>
+                    <div class="col-md-10">
+                        <strong>Question 1</strong>
+                        <h5>
+                            Your mind is always buzzing with unexplored ideas and plans.
+                        </h5>
+                        <select class="form-control question" id="q1">
+                            <option class="place">Select a response</option>
+                            <option value="1">1 (Strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="col-md-10">
+                        <strong>Question 2</strong>
+                        <h5>
+                            Generally speaking, you rely more on your experience than your
+                            imagination.
+                        </h5>
+                        <select class="form-control question" id="q2">
+                            <option class="place">Select a response</option>
+                            <option value="1">1 (Strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="col-md-10">
+                        <strong>Question 3</strong>
+                        <h5>
+                            You find it easy to stay relaxed and focused even when there is some
+                            pressure.
+                        </h5>
+                        <select class="form-control question" id="q3">
+                            <option class="place">Select a response</option>
+                            <option value="1">1 (Strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="col-md-10">
+                        <strong>Question 4</strong>
+                        <h5>
+                            You rarely do something just out of sheer curiosity.
+                        </h5>
+                        <select class="form-control question" id="q4">
+                            <option class="place">Select a response</option>
+                            <option value="1">1 (Strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="col-md-10">
+                        <strong>Question 5</strong>
+                        <h5>
+                            People can rarely upset you.
+                        </h5>
+                        <select class="form-control question" id="q5">
+                            <option class="place">Select a response</option>
+                            <option value="1">1 (Strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="col-md-10">
+                        <strong>Question 6</strong>
+                        <h5>
+                            It is often difficult for you to relate to other people's feelings.
+                        </h5>
+                        <select class="form-control question" id="q6">
+                            <option class="place">Select a response</option>
+                            <option value="1">1 (Strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="col-md-10">
+                        <strong>Question 7</strong>
+                        <h5>
+                            In a discussion, truth should be more important than people’s
+                            sensitivities.
+                        </h5>
+                        <select class="form-control question" id="q7">
+                            <option class="place">Select a response</option>
+                            <option value="1">1 (Strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="col-md-10">
+                        <strong>Question 8</strong>
+                        <h5>
+                            You rarely get carried away by fantasies and ideas.
+                        </h5>
+                        <select class="form-control question" id="q8">
+                            <option class="place">Select a response</option>
+                            <option value="1">1 (Strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="col-md-10">
+                        <strong>Question 9</strong>
+                        <h5>
+                            You think that everyone’s views should be respected regardless of
+                            whether they are supported by facts or not.
+                        </h5>
+                        <select class="form-control question" id="q9">
+                            <option class="place">Select a response</option>
+                            <option value="1">1 (Strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="col-md-10">
+                        <strong>Question 10</strong>
+                        <h5>
+                            You feel more energetic after spending time with a group of people.
+                        </h5>
+                        <select class="form-control question" id="q10">
+                            <option class="place">Select a response</option>
+                            <option value="1">1 (Strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly agree)</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="row submit">
+                    <button type="submit" class="btn btn-primary" id="add-survey">Match me!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/Lileu/FriendFinder"
+                    target="_blank">GitHub Repo</a>
+        </div>
+    </footer>
+
+    </div>
+
+
+</body>
+
+</html>
