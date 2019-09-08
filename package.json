@@ -1,0 +1,22 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "Week 13 homework assignment - Node &amp; Express Servers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lileu/FriendFinder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lileu/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/Lileu/FriendFinder#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
