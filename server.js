@@ -11,19 +11,19 @@ var PORT = process.env.PORT || 8080;
 
 // EXPRESS MIDDLEWARE
 // ===============================================================================
-app.use(express.urlencoded({ extended: true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
 // Static middleware function which allows access to the public folder via its absolute path    
-app.use('/static', express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')))
 
 // ROUTER
 // ===============================================================================
-require("./routing/apiRoutes")(app);
-require("./routing/htmlRoutes")(app);
+require(path.join(__dirname, "./app/routing/apiRoutes"))(app);
+require(path.join(__dirname, "./app/routing/htmlRoutes"))(app);
 
 // LISTENER
 // ===============================================================================
 app.listen(PORT, function() {
-    console.log("App listening on PORT: " + PORT);
+    console.log("Friend Finder App is listening on PORT: " + PORT);
   });
   
