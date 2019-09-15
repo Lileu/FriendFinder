@@ -1,53 +1,50 @@
 // LOAD DATA
-var friends = require("../data/friends");
+var friendsData = require("../data/friends");
 
 // ROUTING
 // ===============================================================================
 
 module.exports = function (app) {
     // retrieve all friends data in json format
-    app.get('/api/friends', function (req, res) {
-        res.json(friends);
+    app.get("/api/friends", function (req, res) {
+        res.json(friendsData);
     });
+
 
     // handle incoming survey results
     app.post('/api/friends', function (req, res) {
         // req.body property parses incoming request bodies in a middleware before handlers
         // record all user input
-        var userInput = req.body;
-
-        // record survey responses
-        var userResponses = userInput.scores;
+        var userData = req.body;
+        var userScores = userData.scores;
+        var totalDifference = 0;
 
         // compute match
-        var matchName = '';
-        var matchImage = '';
-        var totalVariance = 10000;
-
+        var bestMatch = {
+            name: "",
+            photo: "",
+            friendDifference: 1000
+        }
 
         // for each friend in the db
-        for (var i = 0; i < friends.length; i++) {
+        for (var i = 0; i < friendsData.length; i++) {
+            totalDifference = 0;
             // calculate the difference between their score and the user's score
-            var scoreVariance = 0;
-            for (var j = 0; j < userResponses.length; j++) {
-                scoreVariance += Math.abs(friends[i].scores[j] - userInput[j]);
+
+            for (var j = 0; j < userScores.length; j++) {
+                totalDifference += Math.abs(parseInt(friendsData[i].scores[j]) - parseInt(userScores[j]));
             }
             // find the friend with the lowest score variance and declare that friend as the match
-            if (scoreVariance < totalVariance) {
+            if (totalDifference <= bestMatch.friendDifference) {
 
-                totalVariance = scoreVariance;
-                matchName = friends[i].name;
-                matchImage = friends[i].photo;
+                bestMatch.friendDifference = totalDifference;
+                bestMatch.name = friendsData[i].name;
+                bestMatch.photo = friendsData[i].photo;
             }
         }
         // add new user to db
-        friends.push(userInput);
+        friendsData.push(userData);
         // send response with the match data
-        res.json({
-            status: 'OK',
-            matchName: matchName,
-            matchImage: matchImage
-        });
-
+        res.json(bestMatch);
     });
 };
